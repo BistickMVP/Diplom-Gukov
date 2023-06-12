@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>СК Фаворит ЮГ-СТРОЙ</title>
+  <link rel="stylesheet" href="css/style5.css">
+</head>
+<body>
+<div id = "form2">
+        <div id = "block2">
+          <p><a href="index3.php">Назад</a></p>
+        </div>
+      </div>
+<?php
+  $id = $_GET['id'];
+ require 'configDB.php';
+
+ $sql = 'SELECT * FROM `employees` WHERE `id` = ?';
+ $query = $pdo->prepare($sql);
+ $query->execute([$id]);
+ while($row = $query->fetch(PDO::FETCH_OBJ)) {
+    echo '<div class = form1>
+    <h1>Редактирование сотрудников</h1>
+    <form action="update3.php?id='.$id.'" method="post">
+        <div class="input-form">
+        <input type="text" class="form-control" name="fio"
+        id="fio" value="'.$row->fio.'"><br>
+      </div>
+      <div class="input-form">
+        <input type="date" class="form-control" name="data"
+        id="data" value="'.$row->data.'"><br>
+      </div>
+      <div class="input-form">
+        <input type="text" class="form-control" name="passport"
+        id="passport" value="'.$row->passport.'"><br>
+      </div>
+      <div class="input-form">
+      <input type="text" class="form-control" name="dolj"
+      id="dolg" value="'.$row->dolj.'"><br>
+    </div>
+    <div class="input-form">
+    <input type="text" class="form-control" name="prorab"
+    id="prorab" value="'.$row->prorab.'"><br>
+  </div>
+      <div class="input-form">
+                <input type="submit" value="Сохранить">
+            </div>'; 
+ }
+ ?>
+ </div>
+</body>
