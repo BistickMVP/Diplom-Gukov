@@ -1,0 +1,92 @@
+body {
+  height: 100vh;
+  background: url("../img/1.jpg") center
+  no-repeat;
+  background-size: cover;
+}
+.container1 {
+  position: absolute;
+  width: 500px;
+  height: 112px;
+	top: 0%;
+  left:73%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+position: relative;
+width: 503px;
+font-family: 'PT Sans Narrow';
+font-style: normal;
+font-weight: 400;
+font-size: 48px;
+line-height: 62px;
+text-align: center;
+
+color: #FFFFFF;
+}
+.form1 {
+  box-sizing: border-box;
+
+position: absolute;
+width: 500px;
+height: 500px;
+left: 690px;
+top: 339px;
+
+background: #000000;
+opacity: 0.8;
+border: 3px solid #FFFFFF;
+}
+h2 {
+  position: relative;
+  height: 76px;
+  
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 62px;
+  text-align: center;
+  
+  color: #ff0000;
+  
+  border: 1px solid #000000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.input-form{
+	margin: 30px 60px;
+	text-align: center;
+}
+
+.input-form input {
+	padding: 10px;
+  margin-top: 30px;
+	width: 100%;
+	color: #ffffff;
+	font-size: 20px;
+	background: none;
+	outline: none;
+	border: 3px solid #FFFFFF;
+	box-sizing: border-box;
+}
+.input-form input[type="text"]:focus, .input-form input[type="password"]:focus {
+	border: 3px solid #000000;
+  background: #ffffff;
+  color:#000000
+}
+.input-form input[type="submit"] {
+	margin-top: 50px;
+	color: #ffffff;
+  width: 40%;
+	font-weight: bold;
+	text-transform: rgb(255, 255, 255);
+  border: 3px solid #FFFFFF;
+  background: none;
+	transition: .5s;
+}
+.input-form input[type="submit"]:hover {
+	background: #ffffff;
+  color:black
+}
